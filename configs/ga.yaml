@@ -1,0 +1,6 @@
+pop_size: 20
+elite_size: 2
+generations: 14
+crossover_rate: 0.9
+mutation_rate: 0.1
+mutation_strength: 0.1
