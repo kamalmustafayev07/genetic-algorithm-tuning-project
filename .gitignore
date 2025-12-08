@@ -1,0 +1,96 @@
+# === Python & Development ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+pip-log.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytest_cache/
+.hypothesis/
+.pyre/
+
+# === Jupyter ===
+.ipynb_checkpoints/
+
+# === IDEs ===
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*~
+.project
+.pydevproject
+.classpath
+.settings/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === TensorFlow / Keras (large files) ===
+*.h5
+*.keras
+*.pb
+saved_model/
+checkpoints/
+model_checkpoints/
+
+# === Data (MNIST is downloaded automatically by Keras) ===
+data/
+*.npz
+*.npy
+*.zip
+*.tar.gz
+
+# === RESULTS FOLDER ===
+# → Track everything in results/ EXCEPT log files
+results/*.txt
+results/*.log
+results/*_log.*
+results/run_log.txt
+results/log_*
+
+# (Optional: be extra safe – explicitly keep the files you really want)
+!results/best_params.json
+!results/ga_progress.png
+!results/fitness_history.json
+!results/**/*.png
+!results/**/*.json
+!results/**/*.jpg
+!results/**/*.jpeg
+!results/**/*.pdf
+
+# === Docs temporary files ===
+docs/*.aux
+docs/*.bbl
+docs/*.blg
+docs/*.fls
+docs/*.fdb_latexmk
+docs/*.log
+docs/*.out
+docs/*.synctex.gz
+docs/*.toc
+
+# === Build / dist ===
+build/
+dist/
+*.egg-info/
