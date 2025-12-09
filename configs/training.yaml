@@ -1,3 +1,3 @@
 epochs_ga: 5
-epochs_final: 50
+epochs_final: 30
 batch_size: 128

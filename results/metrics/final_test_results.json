@@ -1,6 +1,6 @@
 {
-    "test_loss": 0.027460413053631783,
-    "test_accuracy": 0.991599977016449,
+    "test_loss": 0.026059716939926147,
+    "test_accuracy": 0.9925000071525574,
     "best_parameters": {
         "filters1": 20,
         "kernel1": 3,

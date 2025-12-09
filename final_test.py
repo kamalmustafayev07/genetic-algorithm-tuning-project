@@ -23,6 +23,12 @@ def final_evaluation():
 
     test_loss, test_acc = model.evaluate(X_test, y_test_cat, verbose=0)
 
+    # Save trained model
+    os.makedirs("results/models", exist_ok=True)
+    model_save_path = "results/models/final_best_model.keras"
+    model.save(model_save_path)
+    print(f"Model saved to {model_save_path}")
+
     print("\n===== FINAL TEST RESULTS =====")
     print(f"Test Accuracy: {test_acc:.4f}")
     print(f"Test Loss: {test_loss:.4f}")
