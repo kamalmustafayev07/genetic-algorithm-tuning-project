@@ -100,28 +100,41 @@ patience: 5
 
 ### training.yaml
 ```yaml
-epochs_ga: 10
+epochs_ga: 5
+epochs_final: 30
 batch_size: 128
 ```
 
+---
+
 ## Usage
 
-```python
-from src.optimization.ga import genetic_algorithm
-from src.models.cnn_model import evaluate_solution
+To run the hyperparameter optimization using the Genetic Algorithm with the parameters defined in `bounds.yaml`, `ga.yaml`, and `training.yaml`, execute:
 
-# Run genetic algorithm
-best_individual, best_fitness, history = genetic_algorithm(
-    objective_function=evaluate_solution,
-    pop_size=20,
-    elite_size=2,
-    generations=14,
-    patience=5
-)
-
-# Best fitness represents (1 - validation_accuracy)
-print(f"Best validation accuracy: {1 - best_fitness:.4f}")
+```bash
+python main.py
 ```
+
+This will start the GA-based search, evaluate candidate models, and save the best hyperparameter vector to:
+
+```
+results/metrics/best_params.json
+```
+
+Once the best parameters are found, you can train the final CNN model using those optimized values by running:
+
+```bash
+python final_test.py
+```
+
+The final trained model will be stored in:
+
+```
+results/models/
+```
+
+---
+
 
 ## How It Works
 
