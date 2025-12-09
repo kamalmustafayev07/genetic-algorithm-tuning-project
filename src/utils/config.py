@@ -10,4 +10,9 @@ def load_config(file):
 
 TRAINING = load_config("training.yaml")
 GA_PARAMS = load_config("ga.yaml")
-BOUNDS = load_config("bounds.yaml")["bounds"]
+
+# Load bounds (named)
+BOUNDS_DICT = load_config("bounds.yaml")["bounds"]
+
+# This will be used by the genetic algorithm (list of (low, high))
+BOUNDS = list(BOUNDS_DICT.values()) 

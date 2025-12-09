@@ -4,3 +4,4 @@ generations: 14
 crossover_rate: 0.9
 mutation_rate: 0.1
 mutation_strength: 0.1
+patience: 5
