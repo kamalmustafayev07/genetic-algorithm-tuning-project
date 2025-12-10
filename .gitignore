@@ -54,13 +54,6 @@ saved_model/
 checkpoints/
 model_checkpoints/
 
-# === Data (MNIST is downloaded automatically by Keras) ===
-data/
-*.npz
-*.npy
-*.zip
-*.tar.gz
-
 # === RESULTS FOLDER ===
 # → Track everything in results/ EXCEPT log files
 results/*.txt
