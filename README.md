@@ -101,8 +101,10 @@ patience: 5
 ### training.yaml
 ```yaml
 epochs_ga: 5
-epochs_final: 30
-batch_size: 128
+epochs_final: 10
+batch_size_ga: 128
+batch_size_final: 200
+random_seed: 7
 ```
 
 ---
