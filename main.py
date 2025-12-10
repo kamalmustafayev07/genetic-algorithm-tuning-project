@@ -1,13 +1,16 @@
 from src.optimization.ga_evaluator import evaluate_solution
 from src.optimization.ga import genetic_algorithm
 from src.utils.config import GA_PARAMS
+from src.utils.config import TRAINING
 from src.utils.saver import save_json, plot_history
+from src.utils.seed import set_seed
 import os
 
 BEST_PATH = "results/metrics/best_params.json"
 PLOT_PATH = "results/figures/ga_progress.png"
 
 if __name__ == "__main__":
+    set_seed(TRAINING['random_seed'])
     best_vector, best_fitness, history = genetic_algorithm(
         objective_function=evaluate_solution,
         pop_size=GA_PARAMS["pop_size"],

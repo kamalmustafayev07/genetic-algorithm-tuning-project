@@ -19,7 +19,7 @@ def evaluate_solution(vector):
         history = model.fit(
             X_train, y_train_cat,
             epochs=TRAINING["epochs_ga"],
-            batch_size=TRAINING["batch_size"],
+            batch_size=TRAINING["batch_size_ga"],
             verbose=0,
             validation_data=(X_val, y_val_cat)
         )

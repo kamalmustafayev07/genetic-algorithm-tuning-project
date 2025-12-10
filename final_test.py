@@ -2,6 +2,7 @@ from src.data.data_loader import load_data
 from src.models.model_builder import build_model_from_vector
 from src.utils.saver import save_json
 from src.utils.config import TRAINING
+from src.utils.seed import set_seed
 import json
 import matplotlib.pyplot as plt
 import os
@@ -17,11 +18,14 @@ def final_evaluation():
     history = model.fit(
         X_train_full, y_train_cat,
         epochs=TRAINING["epochs_final"],
-        batch_size=TRAINING["batch_size"],
+        batch_size=TRAINING["batch_size_final"],
         verbose=1
     )
 
     test_loss, test_acc = model.evaluate(X_test, y_test_cat, verbose=0)
+
+    # Evaluation (like in document)
+    print(f"Model error rate: {100 - test_acc * 100:.2f}%")
 
     # Save trained model
     os.makedirs("results/models", exist_ok=True)
@@ -69,4 +73,5 @@ def final_evaluation():
 
 
 if __name__ == "__main__":
+    set_seed(TRAINING['random_seed'])
     final_evaluation()

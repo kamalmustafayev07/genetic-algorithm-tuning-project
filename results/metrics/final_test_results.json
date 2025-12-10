@@ -1,14 +1,14 @@
 {
-    "test_loss": 0.026059716939926147,
-    "test_accuracy": 0.9925000071525574,
+    "test_loss": 0.030982730910182,
+    "test_accuracy": 0.9900000095367432,
     "best_parameters": {
-        "filters1": 20,
+        "filters1": 19,
         "kernel1": 3,
-        "filters2": 17,
+        "filters2": 18,
         "kernel2": 3,
-        "dropout_rate": 0.27102178338810434,
-        "dense1": 41,
-        "dense2": 29,
-        "learning_rate": 0.0009231773756623932
+        "dropout_rate": 0.22946310524417202,
+        "dense1": 50,
+        "dense2": 24,
+        "learning_rate": 0.0009057377843594462
     }
 }
